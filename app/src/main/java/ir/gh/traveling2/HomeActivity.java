@@ -2,6 +2,7 @@ package ir.gh.traveling2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,8 +22,9 @@ public class HomeActivity extends AppCompatActivity {
     FloatingActionButton fabAddTrip;
     TripAdapter tripAdapter;
     ArrayList<Trip> tripList;
-    Button btnViewMap;
-    Button btnViewCalendar;
+
+    ImageButton btnViewMap;
+    ImageButton btnViewCalendar;
 
 
         @Override
@@ -59,6 +61,11 @@ public class HomeActivity extends AppCompatActivity {
 
             btnViewCalendar.setOnClickListener(v -> {
                 Intent intent = new Intent(HomeActivity.this, CalendarActivity.class);
+                startActivity(intent);
+            });
+
+            findViewById(R.id.btnProfile).setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
                 startActivity(intent);
             });
 

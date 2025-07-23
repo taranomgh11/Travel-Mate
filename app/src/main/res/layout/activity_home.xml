@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E7ECF4">
+    android:background="#EBF1FB">
 
-
+    <!-- شمارش سفرها -->
     <TextView
         android:id="@+id/tvTripCount"
         android:layout_width="wrap_content"
@@ -19,46 +20,78 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tvTripCount"
-        android:layout_above="@+id/btnViewMap"
+        android:layout_above="@+id/bottomBar"
         android:layout_margin="8dp" />
 
-    <!-- 🗺️ دکمه نقشه -->
-    <Button
-        android:id="@+id/btnViewMap"
-        android:layout_width="wrap_content"
+
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Do you want to see the map?"
+        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="72dp"
-        android:backgroundTint="#183661"
-        android:textColor="#FCD307" />
+        android:background="#EBF1FB"
+
+        android:padding="8dp"
+        android:gravity="center"
+        android:outlineAmbientShadowColor="@color/black">
 
 
-    <Button
-        android:id="@+id/btnViewCalendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you want to see the calendar?"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#183661"
-        android:textColor="#FCD307" />
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_rounded"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_person_outline_24" />
+
+        <ImageButton
+            android:id="@+id/btnExplore"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_rounded"
+            android:contentDescription="Explore"
+            android:src="@drawable/baseline_search_24" />
+
+        <ImageButton
+            android:id="@+id/btnViewMap"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_rounded"
+            android:contentDescription="Map"
+            android:src="@drawable/baseline_map_24" />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddTrip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:contentDescription="Add Trip"
-        android:backgroundTint="#FCD307"
-        />
+
+
+        <ImageButton
+            android:id="@+id/btnViewCalendar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_rounded"
+            android:contentDescription="Calendar"
+            android:src="@drawable/baseline_calendar_today_24" />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+
+            android:backgroundTint="#FCD307"
+
+            android:contentDescription="Add Trip"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </LinearLayout>
+
 </RelativeLayout>
-
