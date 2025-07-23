@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="17dp"
+    android:background="#E7ECF4">
+
+    <TextView
+        android:id="@+id/tvDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#183661"
+        />
+
+    <TextView
+        android:id="@+id/tvDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StartDate - EndDate"
+        android:textColor="#597EAE"/>
+
+    <TextView
+        android:id="@+id/tvBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:textColor="#597EAE"
+        />
+
+    <TextView
+        android:id="@+id/tvNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textColor="#597EAE"/>
+
+    <TextView
+        android:id="@+id/tvReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reminder"
+        android:textColor="#183661"/>
+</LinearLayout>
